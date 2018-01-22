@@ -1,0 +1,23 @@
+input: !InSoundConf
+  bufferSize: 65536
+  mixer: default
+  source: !FileSourceConf
+    filePath: /Users/agdubrov/Downloads/01.wav
+
+  filters:
+    - !EqConf
+      bandsCount: 15
+      bands:
+        band3l: 0.4
+        band3r: 0.4
+        band4l: 0.4
+        band4r: 0.4
+        band13l: -0.2
+        band13r: -0.2
+        band14l: -0.2
+        band14r: -0.2
+
+output: !OutSoundConf
+  bufferSize: 65536
+  control:
+    gain: 0.4
